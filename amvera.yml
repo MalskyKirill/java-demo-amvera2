@@ -1,0 +1,13 @@
+# amvera.yml
+meta:
+    environment: docker          # говорим Amvera, что проект докерный
+    toolchain:
+        name: docker
+        version: latest            # можно зафиксировать версию, но обычно достаточно latest
+
+build:
+    dockerfile: Dockerfile       # какой Dockerfile использовать
+    skip: false                  # не пропускать сборку (нужно, чтобы Amvera делала docker build)
+
+run:
+    containerPort: 8080          # порт, который слушает приложение внутри контейнера
